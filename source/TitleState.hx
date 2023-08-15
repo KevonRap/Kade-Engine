@@ -48,6 +48,7 @@ class TitleState extends MusicBeatState
 	#if android
 FlxG.android.preventDefaultKeys = [BACK];
 #end
+	#if android || FlxG.android.justReleased.BACK #end
 		// TODO: Refactor this to use OpenFlAssets.
 		#if FEATURE_FILESYSTEM
 		if (!sys.FileSystem.exists(Sys.getCwd() + "/assets/replays"))
