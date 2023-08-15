@@ -38,6 +38,7 @@ class Main extends Sprite
 	public static function main():Void
 	{
 		// quick checks
+		SUtil.checkFiles();
 
 		Lib.current.addChild(new Main());
 	}
