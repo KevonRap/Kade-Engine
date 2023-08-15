@@ -1,5 +1,4 @@
 package;
-
 import flixel.math.FlxMath;
 import flixel.FlxCamera;
 import flixel.text.FlxText;
@@ -13,6 +12,13 @@ import openfl.Lib;
 import Conductor.BPMChangeEvent;
 import flixel.FlxG;
 import flixel.addons.ui.FlxUIState;
+#if mobile
+import mobile.flixel.FlxHitbox;
+import mobile.flixel.FlxVirtualPad;
+import flixel.FlxCamera;
+import flixel.input.actions.FlxActionInput;
+import flixel.util.FlxDestroyUtil;
+#end
 
 class MusicBeatState extends FlxUIState
 {
