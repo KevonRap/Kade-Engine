@@ -115,7 +115,9 @@ class TitleState extends MusicBeatState
 		#end
 		#end
 	}
-
+	#if android
+FlxG.android.preventDefaultKeys = [BACK];
+#end
 	var logoBl:FlxSprite;
 	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
