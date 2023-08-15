@@ -45,6 +45,9 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
+	#if android
+FlxG.android.preventDefaultKeys = [BACK];
+#end
 		// TODO: Refactor this to use OpenFlAssets.
 		#if FEATURE_FILESYSTEM
 		if (!sys.FileSystem.exists(Sys.getCwd() + "/assets/replays"))
@@ -115,9 +118,7 @@ class TitleState extends MusicBeatState
 		#end
 		#end
 	}
-	#if android
-FlxG.android.preventDefaultKeys = [BACK];
-#end
+
 	var logoBl:FlxSprite;
 	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
