@@ -7,6 +7,13 @@ import flixel.input.gamepad.FlxGamepad;
 import Conductor.BPMChangeEvent;
 import flixel.FlxG;
 import flixel.FlxSubState;
+#if mobile
+import mobile.flixel.FlxHitbox;
+import mobile.flixel.FlxVirtualPad;
+import flixel.FlxCamera;
+import flixel.input.actions.FlxActionInput;
+import flixel.util.FlxDestroyUtil;
+#end
 
 class MusicBeatSubstate extends FlxSubState
 {
