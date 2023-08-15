@@ -45,6 +45,8 @@ class Main extends Sprite
 
 	public function new()
 	{
+		SUtil.uncaughtErrorHandler();
+		
 		instance = this;
 
 		super();
@@ -88,7 +90,7 @@ class Main extends Sprite
 		#if !cpp
 		framerate = 60;
 		#end
-
+			
 		// Run this first so we can see logs.
 		Debug.onInitProgram();
 
