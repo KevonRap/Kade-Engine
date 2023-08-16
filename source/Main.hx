@@ -46,6 +46,8 @@ class Main extends Sprite
 	public function new()
 	{
 		SUtil.uncaughtErrorHandler();
+
+		SUtil.saveContent("your file name", ".txt", "Saved!");
 		
 		instance = this;
 
